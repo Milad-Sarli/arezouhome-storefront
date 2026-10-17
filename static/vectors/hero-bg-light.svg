@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="hl-blob-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2f80ed" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#2f80ed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hl-blob-sky" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hl-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.4" fill="#2f80ed" fill-opacity="0.20"/>
+    </pattern>
+    <pattern id="hl-lines" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="2.5" height="16" fill="#2f80ed" fill-opacity="0.10"/>
+    </pattern>
+    <linearGradient id="hl-fade-b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#faf8f4" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#faf8f4"/>
+
+  <!-- soft color fields -->
+  <ellipse cx="250" cy="220" rx="430" ry="330" fill="url(#hl-blob-blue)"/>
+  <ellipse cx="1380" cy="700" rx="400" ry="300" fill="url(#hl-blob-sky)"/>
+  <ellipse cx="820" cy="120" rx="300" ry="180" fill="url(#hl-blob-sky)" opacity="0.6"/>
+
+  <!-- halftone patch, top-left -->
+  <g>
+    <rect x="60" y="70" width="380" height="230" rx="28" fill="url(#hl-dots)"/>
+  </g>
+
+  <!-- diagonal lines patch, bottom-right -->
+  <g>
+    <rect x="1230" y="620" width="300" height="200" rx="28" fill="url(#hl-lines)"/>
+  </g>
+
+  <!-- concentric rings, left edge -->
+  <g fill="none" stroke="#2f80ed">
+    <circle cx="120" cy="620" r="130" stroke-opacity="0.22" stroke-width="2"/>
+    <circle cx="120" cy="620" r="92" stroke-opacity="0.30" stroke-width="2" stroke-dasharray="10 12"/>
+    <circle cx="120" cy="620" r="54" stroke-opacity="0.38" stroke-width="2"/>
+  </g>
+
+  <!-- thin ring, right side -->
+  <g fill="none" stroke="#0ea5e9">
+    <circle cx="1470" cy="240" r="95" stroke-opacity="0.30" stroke-width="2"/>
+    <circle cx="1470" cy="240" r="62" stroke-opacity="0.40" stroke-width="2" stroke-dasharray="6 10"/>
+  </g>
+
+  <!-- plus marks -->
+  <g stroke="#2f80ed" stroke-width="5" stroke-linecap="round" stroke-opacity="0.45">
+    <path d="M520 160 v44 M498 182 h44"/>
+    <path d="M1120 430 v44 M1098 452 h44"/>
+    <path d="M700 700 v36 M682 718 h36"/>
+  </g>
+
+  <!-- solid accent dots -->
+  <g fill="#2f80ed">
+    <circle cx="600" cy="260" r="11" fill-opacity="0.55"/>
+    <circle cx="1020" cy="180" r="7" fill-opacity="0.45"/>
+    <circle cx="1290" cy="520" r="9" fill-opacity="0.50"/>
+    <circle cx="420" cy="560" r="7" fill-opacity="0.40"/>
+    <circle cx="880" cy="780" r="11" fill-opacity="0.45"/>
+  </g>
+
+  <!-- hollow accent circles -->
+  <g fill="none" stroke="#2f80ed" stroke-width="4">
+    <circle cx="760" cy="400" r="14" stroke-opacity="0.45"/>
+    <circle cx="1180" cy="700" r="14" stroke-opacity="0.40"/>
+  </g>
+
+  <!-- bottom blend into page -->
+  <rect y="720" width="1600" height="180" fill="url(#hl-fade-b)"/>
+</svg>

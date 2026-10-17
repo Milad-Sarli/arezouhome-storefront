@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>آرزو — چه امکاناتی می‌تونیم اضافه کنیم؟</title>
+<link rel="icon" href="/favicon.svg"/>
+<style>
+  @font-face{font-family:'Dana';src:url('/fonts/Dana-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'Dana';src:url('/fonts/Dana-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+  @font-face{font-family:'Kalameh';src:url('/fonts/KalamehWeb-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+  @font-face{font-family:'Vazirmatn';src:url('/fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+  *{box-sizing:border-box} body{margin:0;font-family:'Dana',Tahoma,sans-serif;background:#faf8f4;color:#1c1917}
+  .display{font-family:'Kalameh','Dana',sans-serif}
+  .toman{font-family:'Vazirmatn',Tahoma,sans-serif}
+  .hero{position:relative;overflow:hidden;border-radius:28px;min-height:42vh;display:flex;align-items:center}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.25) 60%,rgba(0,0,0,.1))}
+  .card{border:1px solid #e7e5e4;background:#fff;border-radius:24px;box-shadow:0 8px 30px rgba(0,0,0,.04)}
+  .badge{font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px}
+  .b-blue{background:#eff6ff;color:#1d4ed8} .b-amber{background:#fef3c7;color:#92400e} .b-emerald{background:#ecfdf5;color:#065f46} .b-red{background:#fef2f2;color:#991b1b}
+  .grid7{max-width:1280px;margin:auto;padding:0 16px}
+  @media(min-width:768px){.gridCards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.gridCards{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<!-- top -->
+<div class="grid7 py-4 flex items-center justify-between">
+  <span class="display text-2xl">آرزو<span style="color:#2f80ed">.</span></span>
+  <span class="badge b-blue">تحلیل بر اساس دیجی‌کالا + آمازون + Volusion 2026</span>
+</div>
+
+<!-- hero -->
+<div class="grid7">
+  <div class="hero">
+    <img src="/images/hero-01.webp" alt=""/>
+    <div style="position:relative;max-width:720px;margin:auto;text-align:center;padding:48px 16px;color:#fff">
+      <span style="display:inline-block;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);backdrop-filter:blur(8px);padding:6px 12px;border-radius:999px;font-size:11px;font-weight:700">نقشه راه ۲۰۲۶</span>
+      <h1 class="display" style="font-size:clamp(1.9rem,4.5vw,2.8rem);line-height:1.2;margin:14px 0 10px;text-shadow:0 4px 24px rgba(0,0,0,.4)">چه امکاناتی می‌تونیم اضافه کنیم؟</h1>
+      <p style="color:rgba(255,255,255,.85);font-size:14px;line-height:1.8">۷ پیشنهادِ اولویت‌دار بر اساس سایت‌های معتبر — با اثر روی تبدیل و سختی پیاده‌سازی</p>
+    </div>
+  </div>
+</div>
+
+<!-- done -->
+<div class="grid7" style="margin-top:18px">
+  <div class="card" style="padding:14px 16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <span class="badge b-emerald">✅ الان داریم</span>
+    <span style="font-size:12px;color:#57534e">سبد • OTP • تسویه ۳-مرحله‌ای • شگفت‌انگیز تایمردار • جستجوی زنده • فیلتر دسته/برند/قیمت اسلایدری • سورت • wishlist ابری • مقایسه ۴تایی • نظر + خریدار تأییدشده + Q&A • بازدید اخیر • اعلان موجودی • پیگیری تایم‌لاین • تیکت • مرجوعی • لغو سفارش • فاکتور • خبرنامه • اسلایدر</span>
+  </div>
+</div>
+
+<!-- 7 cards -->
+<div class="grid7" style="margin-top:16px;display:grid;gap:14px" class="gridCards" id="grid"></div>
+<script>
+const items=[
+  {n:1,t:"سفارش پیشنهادی «برای شما»",d:"بر اساس آخرین دیده‌شده و خریده‌شده، ۴ کالا تو هوم و سبد. جهیزیه‌ای‌ها سبد متوسط رو خیلی می‌برن بالا.",chip:"اثر ۶۷٪ ↑ تبدیل",c:"b-blue",diff:"سختی: کم",src:"دیجی‌کالا شخصی‌سازی • Volusion"},
+  {n:2,t:"یادآوری سبد رها شده",d:"۱ ساعت بعد SMS/ایمیل: «سبدت هنوز منتظره» + دکمه برگشت با لینک مستقیم به سبد.",chip:"۷۰٪ سبدها رها میشن",c:"b-amber",diff:"سختی: کم",src:"Tibicle push 20-30% open"},
+  {n:3,t:"ویدیو محصول",d:"فیلد video برای هر کالا، تب ویدیو تو گالری + نوار ویدیویی هوم. نمایش در حال استفاده، نه فقط عکس ثابت.",chip:"۳۰٪ ↑ تبدیل، ۴۰٪ ↓ مرجوعی",c:"b-blue",diff:"سختی: متوسط",src:"Tibicle / Shopify"},
+  {n:4,t:"باشگاه مشتریان امتیازی",d:"هر ۱۰ هزار تومان = ۱ امتیاز، خرج برای تخفیف. نمایش امتیاز تو حساب و تسویه.",chip:"LTV تا ۲×",c:"b-emerald",diff:"سختی: متوسط",src:"IndieHackers loyalty"},
+  {n:5,t:"اثبات اجتماعی زنده",d:"نوار «الان ۳ نفر این یخچال رو می‌بینن / دیروز ۷ نفر خریدن» — اعتماد رو می‌سازه.",chip:"۳۲٪ ↑ اعتماد",c:"b-amber",diff:"سختی: کم",src:"Volusion trust"},
+  {n:6,t:"چت زنده / دستیار خرید",d:"ویجت پایین-راست که از روی مشخصات جواب میده: «این یخچال برای ۷۰ متری خوبه؟»",chip:"ترند ۲۰۲۶",c:"b-blue",diff:"سختی: متوسط",src:"Conversational commerce"},
+  {n:7,t:"هدیه‌پیچی + پیام هدیه",d:"تو تسویه تیک «هدیه‌ست» + متن کارت + بسته‌بندی کادو. برای جهیزیه خیلی درخواست میشه.",chip:"AOV ↑",c:"b-red",diff:"سختی: کم",src:"Digikala gift"},
+];
+const g=document.getElementById('grid');
+g.style.display='grid'; g.style.gap='14px'; g.style.gridTemplateColumns='repeat(auto-fit,minmax(280px,1fr))';
+g.innerHTML=items.map(x=>`
+  <div class="card" style="padding:18px">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="width:28px;height:28px;border-radius:999px;background:#1c1917;color:#fff;display:grid;place-items:center;font-weight:900;font-size:13px">${x.n}</span>
+      <span class="badge ${x.c}">${x.chip}</span>
+      <span style="margin-right:auto;font-size:11px;color:#78716c">${x.diff}</span>
+    </div>
+    <div class="display" style="font-size:16px;margin:10px 0 6px">${x.t}</div>
+    <div style="font-size:13px;line-height:1.8;color:#57534e">${x.d}</div>
+    <div style="margin-top:10px;font-size:11px;color:#a8a29e">منبع: ${x.src}</div>
+  </div>
+`).join('');
+</script>
+
+<!-- CTA -->
+<div class="grid7" style="margin:18px auto 24px">
+  <div class="card" style="padding:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+    <div>
+      <div class="display" style="font-size:18px">پیشنهاد من برای ادامه</div>
+      <div style="font-size:13px;color:#57534e;margin-top:4px">همین الان <b>۱ + ۲</b> رو بسازم (۲ روزه، اثر فوری) — بعد <b>۳</b> (ویدیو)</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="/products" style="background:#2f80ed;color:#fff;padding:10px 18px;border-radius:999px;font-weight:800;text-decoration:none">باشه، برو ۱+۲</a>
+      <a href="/" style="border:1px solid #e7e5e4;padding:10px 18px;border-radius:999px;font-weight:700;text-decoration:none;color:#1c1917">بعداً</a>
+    </div>
+  </div>
+  <div style="text-align:center;font-size:11px;color:#a8a29e;margin-top:8px">طراحی هم‌تم با هیروی آرزو — فونت Dana/Kalameh، گرد ۲۸، سایه نرم، گرم</div>
+</div>
+</body>
+</html>
